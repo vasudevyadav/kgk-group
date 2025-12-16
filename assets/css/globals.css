@@ -1,0 +1,198 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Import Tailwind CSS core */
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+
+  --color-primary: #8c745a;
+  --color-dark-primary: #383a36;
+  --color-light-primary: #fff5e9;
+  --color-secondary: #1f355e;
+  --color-light-gray: #e2e2e2;
+  --color-dark-gray: #383a35;
+  --color-mid-gray: #d9d9d9;
+  --color-cream: #fff5e8;
+  --color-deep-blue: #314260;
+  --color-heading: #383a35;
+  --color-third: #383a35;
+  --color-paragraph: #000000;
+  --color-forth: #373935;
+
+  --font-body: "Noto Sans", sans-serif;
+  --font-cardo: "Cardo", sans-serif;
+  --font-myriad: 'Myriad Pro', sans-serif;
+
+}
+
+@layer utilities {
+  .mask-leadership::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/mask-1.png') no-repeat center / cover;
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  top: 0 !important;
+}
+
+.container {
+  @apply max-w-[1800px] mx-auto px-4 sm:px-6 md:px-8 lg:px-14;
+}
+
+.legacy-bg {
+  background-image: url('../images/legacy.jpg');
+}
+
+.custom-swiper-scrollbar .swiper-scrollbar-drag {
+    background-color: white;
+    border-radius: 99px;
+    height: 5px;
+    top: -1px;;
+}
+
+.container-after::after {
+      content: '';
+    position: absolute;
+    top: calc(var(--spacing) * 12);
+    left: 50%;
+    width: 66%;
+    height: 88%;
+    background: #1f355e;
+    border-radius: 0.75rem;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.container-after-2::after {
+      content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100% - 200px);
+    height: 78%;
+    background: #314260;
+    border-radius: 20px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .container-after-2::after {
+    top: 16px;
+    width: calc(100% - 15px); 
+  }
+}
+
+.center-card-after::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 24px);
+  height: 100%;
+  background: #d9d9d9;
+  border-radius: 0.75rem;
+  pointer-events: none;
+      z-index: -1;
+    top: 0;
+}
+
+
+/* Scrollbar width */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track styling */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 5px #8c745a;         /* Gives soft edge */
+  border-left: 1.5px solid transparent;     /* Simulates a thin track */
+  border-right: 1.5px solid transparent;
+  border-radius: 4px;
+}
+
+/* Thumb styling */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #383a35;
+  border-radius: 4px;
+}
+
+.custom-card1 {
+  filter: drop-shadow(-2.588px 9.659px 13px rgba(118, 118, 118, 0.32));
+}
+
+.fade-slide {
+  opacity: 0 !important;
+          pointer-events: none;
+          transition: opacity 0.5s ease-in-out;
+}
+
+#distribution-map path[data-code="US-AK"],
+#distribution-map path[data-code="AK"] {
+  display: none !important;
+}
+
+.pulse-dot {
+  animation: pulse 1.5s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    r: 3;
+    opacity: 1;
+  }
+  100% {
+    r: 8;
+    opacity: 0;
+  }
+}
+
+@keyframes slideInDownCustom {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+.animate-slide-in-down {
+  animation: slideInDownCustom 0.3s ease forwards;
+}
+
+
+/* Hide Google Translate's top frame and overlay */
+iframe.skiptranslate,
+body > .goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "kgk-group",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.7",
+    "@react-jvectormap/core": "^1.0.4",
+    "@react-jvectormap/unitedstates": "^1.0.1",
+    "@react-jvectormap/world": "^1.1.2",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.15.0",
+    "he": "^1.2.0",
+    "html-react-parser": "^5.2.6",
+    "lucide-react": "^0.511.0",
+    "next": "15.3.3",
+    "postcss": "^8.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.60.0",
+    "react-icons": "^5.5.0",
+    "react-masonry-css": "^1.0.16",
+    "swiper": "^11.2.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://kgk-group-new.vercel.app/sitemap.xml
